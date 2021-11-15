@@ -2,6 +2,7 @@ package leafar.app;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,11 +31,19 @@ public class HomeController {
 //        return "menuDesplegable";
 //    }
     
-    @GetMapping("/menuStatus")    
+    @GetMapping("/menu")    
     public String getStatus(@RequestParam String status, Model model) {
         model.addAttribute("status", status);
+        String view = "home";
+        if (StringUtils.pathEquals(status, "women")){
+        view = "menuWomen";		
+        }
+        if ("men".equals(status)){
+        view = "menuMen";		
+        }
+        
 //        return "menuDesplegable::menuDesplegableFragment";
-        return "home";
+        return view;
 
     }
 

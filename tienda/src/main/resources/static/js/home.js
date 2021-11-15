@@ -14,10 +14,6 @@
 //
 //}
 
-//function cierraMenu(){
-//	$("#miDesplegable").remove()
-//}
-
 //function despliegaMenu(){
 //$.get({  
 // url: 'http://localhost:8080/menuStatus',
@@ -26,9 +22,19 @@
 //  $('#miDesplegable').text(result);
 //});
 
-function despliegaMenu(){
+$(document).ready(function(){
+//	$("#miDesplegable").mouseenter(function(){
+//    		alert("El ratón está sobre el div negro");
+//  	});
+ 
+	$("#miDesplegable").mouseleave(function(){
+    		$("#menu").remove();
+ 	});
+});
 
-  $('#miDesplegable').load('/menuStatus?status=mostrar');
+function despliegaMenu(name) {
 
+	$('#miDesplegable').load('/menu?status='+name);
 
 }
+

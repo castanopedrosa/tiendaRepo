@@ -53,8 +53,8 @@
 
 		</div>
 		<div class="row">
-			<div class="col-1  offset-4" onmouseover="despliegaMenu(this)">Women</div>
-			<div class="col-1">Men</div>
+			<div class="col-1  offset-4" onmouseover="despliegaMenu('women')">Women</div>
+			<div class="col-1" onmouseover="despliegaMenu('men')">Men</div>
 			<div class="col-1">HandBags</div>
 			<div class="col-1">Beauty</div>
 			<div class="col-1">Gift</div>
@@ -62,11 +62,10 @@
 		</div>
 
 
-<div class="row" id="miDesplegable">
+<div class="row position-absolute w-100 bg-white" id="miDesplegable">
 
-</div>
- <span>${status}</span>
- <div th:if = "${status} == 'mostrar'"> cielo de dieciocho años </div>	
+</div> 
+<img src="images/banner.png" class="img-fluid" alt="..." >
 
 </div>
 

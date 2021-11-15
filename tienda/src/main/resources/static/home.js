@@ -1,3 +1,0 @@
-function despliegaMenu(){
-	alert("hola");
-}
