@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-//si pongo RestController estaria incluido el response body y entonces no funciona los templatesss
+//si pongo RestController estaria incluido el response body y entonces no funciona los templatessss
 
 	@RequestMapping("/")
     public String hello(Model modelo){
