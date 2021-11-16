@@ -27,6 +27,15 @@ $(document).ready(function(){
 //    		alert("El ratón está sobre el div negro");
 //  	});
  
+ var altura = $('#menu-fix').offset().top;
+ 
+ $(window).on('scroll',function(){
+	if($(window).scrollTop() > altura){
+		$('#menu-fix').addClass('menu-fixed');
+	}else{
+		$('#menu-fix').removeClass('menu-fixed');
+	}
+})
 	$("#miDesplegable").mouseleave(function(){
     		$("#menu").remove();
  	});
