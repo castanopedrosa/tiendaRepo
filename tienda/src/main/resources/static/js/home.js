@@ -14,13 +14,21 @@
 //
 //}
 
-//function despliegaMenu(){
-//$.get({  
-// url: 'http://localhost:8080/menuStatus',
+function testBD(){
+$.get({  
+ url: 'http://localhost:8080/getAll'
 // data: {status:"mostrar"}
-// }).then(function(result) {
-//  $('#miDesplegable').text(result);
-//});
+ }).then(function(result) {
+  $('#pepe').text(result);
+});
+}
+
+//    $.ajax({
+//        url: "http://rest-service.guides.spring.io/greeting"
+//    }).then(function(data) {
+//       $('.greeting-id').append(data.id);
+//       $('.greeting-content').append(data.content);
+//    });
 
 $(document).ready(function(){
 //	$("#miDesplegable").mouseenter(function(){
