@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/home.js"></script>
+
+
+<title>Spring Demo Projectds</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row bg-dark text-white">
+			<div class="d-flex justify-content-center">
+				<p class="text-center">We Now Accept Klarna On All Orders</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="menu-fix">
+		<div class="row pt-3 px-3 align-items-center">
+			<div class="col-3">
+				<i class="bi bi-currency-pound" style="font-size: 25px;"></i>| <i
+					class="bi bi-currency-euro" style="font-size: 25px;"></i>&nbsp;&nbsp;
+				<i class="bi bi-geo-alt pl-2" style="font-size: 25px;"></i>
+			</div>
+
+			<div class="col-6 ">
+				<p class="text-center fs-3 fw-blod ">JIMMY CHOO</p>
+			</div>
+			<div class="col-2 offset-md-1">
+				<i class="bi bi-search" style="font-size: 25px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+				<i class="bi bi-heart" style="font-size: 25px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+				<i class="bi bi-person" style="font-size: 25px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+				<i class="bi bi-cart4" style="font-size: 25px;"></i>
+			</div>
+		</div>
+		<div class="row pb-3 fs-5 fw-blod">
+			<div class="col-1  offset-4" onmouseover="despliegaMenu('women')"
+				onclick="$(location).attr('href','contenidoWomen');">Women</div>
+			<div class="col-1" onmouseover="despliegaMenu('men')">Men</div>
+			<div class="col-1">HandBags</div>
+			<div class="col-1">Beauty</div>
+			<div class="col-1">Gift</div>
+
+		</div>
+
+
+		<div class="row position-absolute w-100 bg-white" id="miDesplegable"></div>
+		<div class="row fs-3  p-3 d-flex justify-content-center">Contenido
+			de Mujer</div>
+	</div>
+
+	<div class="container-fluid" id="contenido">
+
+		<div class="row">
+			<div class="col-md-4 mb-3" th:each="producto :${productos}">
+				<div class="card card-box" style="width: 18rem;">
+					<div class="cardZoom">
+						<img class="card-img-top img-fluid" src="images/card.jpg"
+							alt="...">
+					</div>
+
+					<div class="card-body" style="text-align:center">
+						<h5 th:text="${producto.name}" class="card-title"></h5>
+						<p class="card-text " th:text="${producto.marca}"></p>
+						<p class="card-text" th:text="${producto.precio}"></p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

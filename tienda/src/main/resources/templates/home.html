@@ -21,12 +21,13 @@
 <title>Spring Demo Projectds</title>
 </head>
 <body>
-<div>
-<button type="button"  id="pepe" class="btn btn-primary" onclick="testBD()">Primary</button>
-</div>
-<div>
-<button type="button"  id="pepe2" class="btn btn-primary" onclick="createProduct()">Add</button>
-</div>
+<!-- <div> -->
+<!-- <button type="button"  id="pepe" class="btn btn-primary" onclick="testBD()">Primary</button> -->
+<!-- </div> -->
+<!-- <div> -->
+<!-- <button type="button"  id="pepe2" class="btn btn-primary" onclick="createProduct()">Add</button> -->
+<!-- </div> -->
+
 	<div class="container-fluid">
 		<div class="row bg-dark text-white">
 			<div class="d-flex justify-content-center">
@@ -53,7 +54,7 @@
 			</div>
 		</div>
 		<div class="row pb-3 fs-5 fw-blod">
-			<div class="col-1  offset-4" onmouseover="despliegaMenu('women')">Women</div>
+			<div class="col-1  offset-4" onmouseover="despliegaMenu('women')" onclick="$(location).attr('href','contenidoWomen');">Women</div>
 			<div class="col-1" onmouseover="despliegaMenu('men')">Men</div>
 			<div class="col-1">HandBags</div>
 			<div class="col-1">Beauty</div>

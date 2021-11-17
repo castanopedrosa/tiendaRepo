@@ -54,6 +54,15 @@ public class HomeController {
         return view;
 
     }
+
+	@GetMapping("/contenidoWomen")
+	public String redirige(Model model) {
+		ResponseEntity<?> productos =  getAll();
+		 model.addAttribute("productos", productos.getBody());
+		String view = "contenidoWomen";
+		return view;
+
+	}
     
     @PostMapping("/save")
     public ResponseEntity<?> createProduct(Producto producto){//requestbody es que en el cuerpo de la llamada metere un producto
