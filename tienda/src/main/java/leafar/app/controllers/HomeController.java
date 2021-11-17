@@ -56,7 +56,7 @@ public class HomeController {
     }
     
     @PostMapping("/save")
-    public ResponseEntity<?> createProduct(@RequestBody Producto producto){//requestbody es que en el cuerpo de la llamada metere un producto
+    public ResponseEntity<?> createProduct(Producto producto){//requestbody es que en el cuerpo de la llamada metere un producto
     	return ResponseEntity.status(HttpStatus.CREATED).body(productoService.save(producto));
     }
     
