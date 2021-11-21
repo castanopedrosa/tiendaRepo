@@ -29,10 +29,10 @@ public class HomeController {
         return "home";
     }
     
-    @RequestMapping("/hola")
-    public String hola(@RequestParam(value="nombre", required=false, defaultValue="Mundo") String nombre, Model model){
-        model.addAttribute("nombre", nombre);
-        return "home";
+    @RequestMapping("/productDescription")
+    public String productDescription(@RequestParam String marca, Model model){  
+    	 model.addAttribute("marca", marca);
+        return "productDescription";
     }    
 
     
