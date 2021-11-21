@@ -35,15 +35,15 @@ function testBD() {
 
 $(document).ready(function() {
 
-	var altura = $('#menu-fix').offset().top;
+//	var altura = $('#menu-fix').offset().top;
 
-	$(window).on('scroll', function() {
-		if ($(window).scrollTop() > altura) {
-			$('#menu-fix').addClass('menu-fixed');
-		} else {
-			$('#menu-fix').removeClass('menu-fixed');
-		}
-	});
+//	$(window).on('scroll', function() {
+//		if ($(window).scrollTop() > altura) {
+//			$('#menu-fix').addClass('menu-fixed');
+//		} else {
+//			$('#menu-fix').removeClass('menu-fixed');
+//		}
+//	});
 	
 	$("#miDesplegable").mouseleave(function() {
 		$("#menu").remove();

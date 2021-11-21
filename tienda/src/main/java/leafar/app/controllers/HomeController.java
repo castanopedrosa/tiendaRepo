@@ -29,6 +29,11 @@ public class HomeController {
         return "home";
     }
     
+	@RequestMapping("/menuComponent")
+    public String menuComponent(){
+        return "menuComponent";
+    }
+	
     @RequestMapping("/productDescription")
     public String productDescription(@RequestParam String marca, Model model){  
     	 model.addAttribute("marca", marca);
