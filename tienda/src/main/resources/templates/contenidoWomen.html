@@ -58,7 +58,7 @@
 		</div>
 
 
-		<div class="row position-absolute w-100 bg-white" id="miDesplegable"></div>
+		<div class="row position-absolute w-100 bg-white"  style="z-index : 100" id="miDesplegable"></div>
 		<div class="row fs-3  p-3 d-flex justify-content-center">Contenido
 			de Mujer</div>
 	</div>
@@ -67,13 +67,13 @@
 
 		<div class="row">
 			<div class="col-md-4 mb-3" th:each="producto :${productos}">
-				<div class="card card-box" style="width: 18rem;">
-					<div class="cardZoom">
-						<img class="card-img-top img-fluid" src="images/card.jpg"
+				<div class="card card-box" style="text-align:center; width: 25rem; ">
+					<div class="cardZoom pt-5">
+						<img class="img-fluid"  th:src="${producto.image}"
 							alt="...">
 					</div>
 
-					<div class="card-body" style="text-align:center">
+					<div class="card-body">
 						<h5 th:text="${producto.name}" class="card-title"></h5>
 						<p class="card-text " th:text="${producto.marca}"></p>
 						<p class="card-text" th:text="${producto.precio}"></p>

@@ -43,7 +43,8 @@ $(document).ready(function() {
 		} else {
 			$('#menu-fix').removeClass('menu-fixed');
 		}
-	})
+	});
+	
 	$("#miDesplegable").mouseleave(function() {
 		$("#menu").remove();
 	});
